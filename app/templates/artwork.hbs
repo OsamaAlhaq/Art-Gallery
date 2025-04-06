@@ -1,1 +1,18 @@
-{{@model.title}}
+<div class="bg-slate-50 py-5 w-full h-full flex flex-col items-center">
+    <img src={{@model.thumbnail.lqip}} height="25%" width="25%" alt={{@model.thumbnail.alt_text}} />
+    <p class="mt-4 font-light text-md mx-4 text-center">{{@model.copyright_notice}}</p>
+</div>
+
+<div class="flex flex-col items-center m-10">
+    <div class="lg:w-[60%] md:w-[80%]">
+        <h2 class="text-3xl">{{@model.title}}</h2>
+        <div class="flex items-center justify-between my-3">
+            <div class="w-[50%]">
+                <p>{{@model.date_display}}</p>
+                <p class="font-light my-4">{{@model.artist_display}}</p>
+            </div>
+            <Favorite @showLabel={{true}} />
+        </div>
+        {{@model.description}}
+    </div>
+</div>

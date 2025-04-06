@@ -1,6 +1,6 @@
 {{!-- Artwork thumbnail --}}
 <LinkTo @route="artwork" @model={{@artwork.id}}>
-  <div class="border border-slate-200 w-[300px] m-4 p-2 cursor-pointer hover:opacity-70">
+  <div class="border border-slate-200 w-[300px] m-4 p-2 cursor-pointer hover:border-3 hover:border-sky-300">
     <img src={{@artwork.thumbnail.lqip}} height="100%" width="100%" alt={{@artwork.thumbnail.alt_text}} />
     <h3 class="font-bold my-2">
       {{@artwork.title}}
@@ -8,8 +8,17 @@
     <div class="flex items-center justify-between">
       <p class="text-sm">{{@artwork.artist_title}}</p>
       <div class="flex align-center">
-        <div class="mr-2">ICON 1</div>
-        <div class="mr-2">ICON 2</div>
+        <div class="mr-2">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+          </svg>
+        </div>
+        <div class="mr-2">
+         <Favorite />
+        </div>
       </div>
     </div>
   </div>

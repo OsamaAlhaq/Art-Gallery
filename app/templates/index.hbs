@@ -5,7 +5,7 @@
 </div>
 {{!-- Pagniation --}}
 <div class="flex justify-center mb-10">
-    <button>Prev page</button>
-    <div class="mx-10">Page {{@model.page}}</div>
-    <button>Next page</button>
+    <button type="button" class="px-3 py-1 shadow-lg cursor-pointer hover:bg-sky-100 border rounded" {{on "click" this.prevPage}}>Prev page</button>
+    <div class="mx-10">Page {{this.page}}</div>
+    <button type="button" class="px-3 py-1 shadow-lg cursor-pointer hover:bg-sky-100 border rounded" {{on "click" this.nextPage}}>Next page</button>
 </div>

@@ -1,5 +1,4 @@
 import Route from '@ember/routing/route';
-import { action } from '@ember/object';
 
 export default class IndexRoute extends Route {
     queryParams = {
@@ -12,8 +11,6 @@ export default class IndexRoute extends Route {
 
     async model(params) {
         try {
-
-            console.info('params', params);
             const page = params.page || 1;
             const response = await fetch(`https://api.artic.edu/api/v1/artworks?page=${page}&limit=25`);
             const { data } = await response?.json();
@@ -23,11 +20,4 @@ export default class IndexRoute extends Route {
             console.error('Error when fetching artworks:', error);
         }
     }
-
-
-    @action
-    handlePageUpdate(newPage) {
-        this.transitionTo({ queryParams: { page: newPage } });
-    }
-
 }
