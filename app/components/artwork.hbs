@@ -1,0 +1,16 @@
+{{!-- Artwork thumbnail --}}
+<LinkTo @route="artwork" @model={{@artwork.id}}>
+  <div class="border border-slate-200 w-[300px] m-4 p-2 cursor-pointer hover:opacity-70">
+    <img src={{@artwork.thumbnail.lqip}} height="100%" width="100%" alt={{@artwork.thumbnail.alt_text}} />
+    <h3 class="font-bold my-2">
+      {{@artwork.title}}
+    </h3>
+    <div class="flex items-center justify-between">
+      <p class="text-sm">{{@artwork.artist_title}}</p>
+      <div class="flex align-center">
+        <div class="mr-2">ICON 1</div>
+        <div class="mr-2">ICON 2</div>
+      </div>
+    </div>
+  </div>
+</LinkTo>

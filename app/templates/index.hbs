@@ -1,0 +1,11 @@
+<div class="m-5 flex justify-center flex-wrap">
+    {{#each @model as |artwork|}}
+    <Artwork @artwork={{artwork}} />
+    {{/each}}
+</div>
+{{!-- Pagniation --}}
+<div class="flex justify-center mb-10">
+    <button>Prev page</button>
+    <div class="mx-10">Page {{@model.page}}</div>
+    <button>Next page</button>
+</div>
