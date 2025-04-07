@@ -3,7 +3,7 @@
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
 
-# Demo
+## Screenshots
 
 <img width="1793" alt="Screenshot 2025-04-07 at 1 20 26 AM" src="https://github.com/user-attachments/assets/dfaa01e4-4838-46b6-9bff-8b20e83e0aa5" />
 
