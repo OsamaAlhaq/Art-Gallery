@@ -2,12 +2,12 @@
 <div class="border border-slate-200 w-[300px] m-4 p-2 flex flex-col justify-between">
   <LinkTo @route="artwork" @model={{@artwork.id}} class="cursor-pointer">
     <Artwork::Image @thumbnail={{@artwork.thumbnail}} @id={{@artwork.image_id}} />
-    <h3 class="font-bold m-2">
+    <h3 data-test-title class="font-bold m-2">
       {{@artwork.title}}
     </h3>
   </LinkTo>
   <div class="flex items-center justify-between">
-    <p class="text-sm">{{@artwork.artist_title}}</p>
+    <p data-test-artist  class="text-sm">{{@artwork.artist_title}}</p>
     <div class="flex align-center">
       {{#if (this.isViewed @artwork)}}
       <div class="mr-2">

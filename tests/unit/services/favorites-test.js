@@ -9,4 +9,17 @@ module('Unit | Service | favorites', function (hooks) {
     let service = this.owner.lookup('service:favorites');
     assert.ok(service);
   });
+
+  test('it adds and removes items to favorites list', function (assert) {
+    let service = this.owner.lookup('service:favorites');
+    assert.equal(service.favorites.length, 0, 'Favorites list is empty');
+    
+    service.add({ id: 1 });
+    assert.equal(service.favorites.length, 1, 'Favorites list is not empty');
+
+    service.remove({ id: 1 });
+    assert.equal(service.favorites.length, 0, 'Favorites list is empty');
+
+  });
+
 });

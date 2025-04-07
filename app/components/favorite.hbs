@@ -1,4 +1,4 @@
-<div class="flex items-center cursor-pointer hover:opacity-50" {{on "click" (fn this.toggleFavorite @artwork)}}>
+<div data-test-favorites-button class="flex items-center cursor-pointer hover:opacity-50" {{on "click" (fn this.toggleFavorite @artwork)}}>
     {{#if (this.isFavorited @artwork)}}
     <svg xmlns="http://www.w3.org/2000/svg" fill="red" viewBox="0 0 24 24" stroke-width="0" stroke="currentColor"
         class="size-6">
