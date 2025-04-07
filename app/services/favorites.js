@@ -11,4 +11,8 @@ export default class FavoritesService extends Service {
     remove(item) {
         this.favorites.splice(this.favorites.indexOf(item), 1);
     }
+
+    isFavorited(item) {
+        return !!this.favorites?.find(artwork => artwork?.id == item.id);
+    }
 }

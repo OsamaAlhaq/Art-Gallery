@@ -1,4 +1,16 @@
 <Container>
+
+    <div class="w-[300px] m-4 p-2 ">
+        <h2 class="font-bold">{{this.artworks.favorites.length}} saved to favorites!</h2>
+
+        {{#each this.categoryStats as |category|}}
+        <div class="flex items-center">
+            <span class="mr-2">{{category.name}}</span>
+            <span class="font-bold"> -- {{category.count}}</span>
+        </div>
+        {{/each}}
+    </div>
+
     {{#each this.artworks.favorites as |favorite|}}
     <Artwork @artwork={{favorite}} />
     {{/each}}
