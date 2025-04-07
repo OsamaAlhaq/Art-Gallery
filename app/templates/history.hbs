@@ -1,2 +1,5 @@
-{{page-title "History"}}
-{{outlet}}
+<Container>
+    {{#each this.viewed.history as |history|}}
+    <Artwork @artwork={{history}} />
+    {{/each}}
+</Container>

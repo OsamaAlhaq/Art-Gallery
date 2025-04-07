@@ -1,8 +1,8 @@
-<div class="m-5 flex justify-center flex-wrap">
+<Container>
     {{#each @model as |artwork|}}
     <Artwork @artwork={{artwork}} />
     {{/each}}
-</div>
+</Container>
 {{!-- Pagniation --}}
 <div class="flex justify-center mb-10">
     <button type="button" class="px-3 py-1 shadow-lg cursor-pointer hover:bg-sky-100 border rounded" {{on "click" this.prevPage}}>Prev page</button>

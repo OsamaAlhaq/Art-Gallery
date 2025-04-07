@@ -1,2 +1,5 @@
-{{page-title "Favorites"}}
-{{outlet}}
+<Container>
+    {{#each this.artworks.favorites as |favorite|}}
+    <Artwork @artwork={{favorite}} />
+    {{/each}}
+</Container>

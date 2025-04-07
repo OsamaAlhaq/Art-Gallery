@@ -1,7 +1,7 @@
 {{!-- Artwork thumbnail --}}
 <LinkTo @route="artwork" @model={{@artwork.id}}>
   <div class="border border-slate-200 w-[300px] m-4 p-2 cursor-pointer hover:border-3 hover:border-sky-300">
-    <img src={{@artwork.thumbnail.lqip}} height="100%" width="100%" alt={{@artwork.thumbnail.alt_text}} />
+    <Artwork::Image @thumbnail={{@artwork.thumbnail}} />
     <h3 class="font-bold my-2">
       {{@artwork.title}}
     </h3>
@@ -16,9 +16,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
           </svg>
         </div>
-        <div class="mr-2">
-         <Favorite />
-        </div>
+        <Favorite @artwork={{@artwork}} />
       </div>
     </div>
   </div>
