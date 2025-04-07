@@ -1,6 +1,6 @@
 <div class="hover:border-3 hover:border-sky-300">
-    {{#if @thumbnail.lqip}}
-    <img src={{@thumbnail.lqip}} height="100%" width="100%" alt={{@thumbnail.alt_text}} />
+    {{#if @id}}
+    <img src="https://www.artic.edu/iiif/2/{{@id}}/full/843,/0/default.jpg" height="100%" width="100%" alt={{@thumbnail.alt_text}} />
     {{else}}
     <div class="bg-slate-200 p-10 flex justify-center">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"

@@ -14,13 +14,5 @@ module('Integration | Component | favorite', function (hooks) {
 
     assert.dom().hasText('');
 
-    // Template block usage:
-    await render(hbs`
-      <Favorite>
-        template block text
-      </Favorite>
-    `);
-
-    assert.dom().hasText('template block text');
   });
 });

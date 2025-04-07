@@ -7,6 +7,6 @@ export default class ArtworkComponent extends Component {
 
     @action
     isViewed(item) {
-        return this.artworks.isViewed(item)
+        return !!this.artworks?.history?.find(artwork => artwork?.id == item.id);
     }
 }

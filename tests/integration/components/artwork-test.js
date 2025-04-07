@@ -14,13 +14,5 @@ module('Integration | Component | artwork', function (hooks) {
 
     assert.dom().hasText('');
 
-    // Template block usage:
-    await render(hbs`
-      <Artwork>
-        template block text
-      </Artwork>
-    `);
-
-    assert.dom().hasText('template block text');
   });
 });

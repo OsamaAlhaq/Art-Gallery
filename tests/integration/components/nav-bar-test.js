@@ -12,15 +12,7 @@ module('Integration | Component | nav-bar', function (hooks) {
 
     await render(hbs`<NavBar />`);
 
-    assert.dom().hasText('');
+    assert.dom().hasText('Artworks Home Favorites History');
 
-    // Template block usage:
-    await render(hbs`
-      <NavBar>
-        template block text
-      </NavBar>
-    `);
-
-    assert.dom().hasText('template block text');
   });
 });

@@ -1,6 +1,6 @@
 <div class="bg-slate-50 py-5 w-full h-full flex flex-col items-center">
     <div class="h-[25%] w-[25%]">
-        <Artwork::Image @thumbnail={{@model.thumbnail}} />
+        <Artwork::Image @thumbnail={{@model.thumbnail}} @id={{@model.image_id}} />
     </div>
     <p class="mt-4 font-light text-md mx-4 text-center">{{@model.copyright_notice}}</p>
 </div>
